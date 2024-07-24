@@ -1,0 +1,32 @@
+.card {
+    border: none; /* Remove default card border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+  
+  .card-body {
+    padding: 2rem;
+    background:#414141; /* Adjust padding for content spacing */
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .form-control {
+    width: 100%; /* Make form controls full width */
+  }
+  
+  .img-fluid {
+    max-width: 100%; /* Ensure the image stays within its container */
+  }
+  
+  @media (max-width: 768px) {
+    .col-md-6 {
+      flex: 0 0 100%; /* Full width on smaller screens */
+      max-width: 100%;
+    }
+  }
+  body {
+    background-color: #1e2228; /* Slightly darker than #343a40 */
+    color: #fff; /* Text color for contrast */
+  }

@@ -1,0 +1,74 @@
+<div class="bg-dark">
+
+<div class="container py-5">
+    <div class="row">
+      <!-- Left column for image -->
+      <div class="col-md-6 d-flex align-items-center">
+        <img src="./assets/images/4.jpg" class="img-fluid rounded-start" alt="Image">
+      </div>
+  
+      <!-- Right column for form -->
+      <div class="col-md-6 text-white">
+        <div class="card">
+          <div class="card-body">
+            <form #f="ngForm" novalidate (ngSubmit)="save(f.value, f.form.valid)">
+              <!-- name -->
+              <div class="mb-3">
+                <label class="form-label fw-bold text-white">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  [(ngModel)]="user.name"
+                  #name="ngModel"
+                  required
+                  minlength="5"
+                  class="form-control"
+                />
+                <small class="text-danger" *ngIf="name.invalid && (name.dirty || name.touched)">
+                  Name is required (minimum 5 characters).
+                </small>
+              </div>
+              
+              <!-- address group -->
+              <div class="mb-3" ngModelGroup="address">
+                <!-- street -->
+                <div class="mb-3">
+                  <label class="form-label fw-bold text-white">Street</label>
+                  <input
+                    type="text"
+                    name="street"
+                    [(ngModel)]="user.address.street"
+                    #street="ngModel"
+                    required
+                    class="form-control"
+                  />
+                  <small class="text-danger" *ngIf="street.invalid && (street.dirty || street.touched)">
+                    Street is required.
+                  </small>
+                </div>
+                
+                <!-- postcode -->
+                <div class="mb-3">
+                  <label class="form-label fw-bold text-white">Post code</label>
+                  <input
+                    type="text"
+                    name="postcode"
+                    [(ngModel)]="user.address.postcode"
+                    class="form-control"
+                  />
+                </div>
+                
+                <div>
+                  <button type="submit" class="btn btn-success btn-sm">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      <div class=" container-fluid justify-content-center map-container bg-dark">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387222.55367389704!2d-74.25819317003232!3d40.70582563072093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1626677641585!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe></div>
+      
+      </div>
+    </div>
+  </div>
+  </div>

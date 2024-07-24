@@ -1,0 +1,36 @@
+<!-- <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users$">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.website }}</td>
+        </tr>
+      </tbody>
+    </table> -->
+    <div class="jumbotron">
+        <div class="container">
+        <div class="row">
+          <!-- Cards -->
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-4" *ngFor="let user of users$">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ user.name }}</h5>
+                <p class="card-text">Email: {{ user.email }}</p>
+                <p class="card-text">Website: {{ user.website }}</p>
+                <button class="btn btn-primary btn-sm float-right">Show Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    

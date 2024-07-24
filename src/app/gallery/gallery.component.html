@@ -1,0 +1,18 @@
+<div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">Gallery</h1>
+      <p class="lead">Check out our amazing collection of images.</p>
+  
+      <div class="row">
+        <div class="col-md-4 mb-4" *ngFor="let lst of appList">
+          <div class="card">
+            <img class="card-img-top" [src]="lst.url" alt="Card image cap">
+            <div class="card-body">
+              <!-- Add any additional content or captions here -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
